@@ -1,0 +1,126 @@
+.navbar-custom {
+    color: white;
+}
+
+/* global */
+
+html,
+body,
+header {
+  overflow: hidden;
+}
+
+
+.view {
+  overflow-y: visible;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+/* navbar */
+
+.bracket {
+  color: #2e0083;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.top-nav-collapse {
+  background-color: #563e91 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, #28a1a5, #540f5e 100%);
+  background: -webkit-linear-gradient(45deg, #28a1a5, #540f5e 100%);
+  background: linear-gradient(to 45deg, #28a1a5, #540f5e 100%);
+}
+
+.background-gradient {
+    background: linear-gradient(-45deg,#5c1199,#750797,#28a1a5, #540f5e,#16a79a);
+    background-size: 600% 600%;
+ 
+    -webkit-animation: background-gradient 10s ease infinite;
+    -moz-animation: background-gradient 10s ease infinite;
+    -o-animation: background-gradient 10s ease infinite;
+    animation: background-gradient 10s ease infinite;
+}
+ 
+@-webkit-keyframes background-gradient {
+    0%{background-position:70% 50%}
+    50%{background-position:20% 50%}
+    100%{background-position:70% 50%}
+}
+@-moz-keyframes background-gradient {
+    0%{background-position:70% 50%}
+    50%{background-position:20% 50%}
+    100%{background-position:70% 50%}
+}
+@-o-keyframes background-gradient {
+    0%{background-position:70% 50%}
+    50%{background-position:20% 50%}
+    100%{background-position:70% 50%}
+}
+@keyframes background-gradient {
+    0%{background-position:70% 50%}
+    50%{background-position:20% 50%}
+    100%{background-position:70% 50%}
+}
+
+
+/* center elements */
+
+.space {
+    margin: 10rem;
+}
+
+.space-low {
+    margin: 7rem;
+}
+
+.main-window {
+    margin-top: 14rem;
+}
+
+.white-text {
+    color: rgb(214, 214, 214);
+}
+
+.grey-text {
+    color: #bebebe;
+}
+
+.line-white {
+  color: #bebebe;
+  padding-left: 10rem;
+}
+
+.jumbo-straight {
+  border-radius: 2px;
+  background: -moz-linear-gradient(45deg, #28a1a556, #540f5e91 10%);
+  background: -webkit-linear-gradient(45deg, #28a1a525, #540f5e49 70%);
+  background: linear-gradient(to 45deg, #28a1a53a, #540f5e49 10%);
+}
+
+.jumbo-title {
+  color: white;
+}
+
+.jumbo-text {
+  color: #e2e2e2;
+}
+
+.jumbo-my-4 {
+  color: #acacac
+}
