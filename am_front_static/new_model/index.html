@@ -1,77 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design for Bootstrap</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sleepless</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/sleepless_icon.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icons/font/flaticon.css">
+  </head>
+<body data-spy="scroll" data-target="navbarSupportedContent" data-offset="0">
 
   <header>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-        <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+    <nav class="nav navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar smooth-scroll" id="navbar">
+        <a class="navbar-brand hoverable" href="#welcome"><strong>Sleepless  </strong>  <img src="img/sleepless_icon.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#welcome">Bienvenue</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#overall">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="#tools">Outils</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#your-needs">Contact</a>
+              </li>
             </ul>
         </div>
     </nav>
 
-    <div class="view intro-2" style="">
-        <div class="full-bg-img">
-            <div class="mask rgba-purple-light flex-center">
-                <div class="container text-center white-text wow fadeInUp">
-                    <h2>This Navbar is fixed and transparent</h2>
-                    <br>
-                    <h5>It will always stay visible on the top, even when you scroll down</h5>
-                    <p>Navbar's background will switch from transparent to solid color while scrolling down</p>
-                    <br>
-                    <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
-                </div>
-            </div>
+    <div class="view jarallax" id="welcome" data-jarallax='{"speed": 0.2}'
+        style="background-image: url(img/highway-animated-wallpaper-4k-3840x2160.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;">
+                
+        <div class="mask smooth-mask flex-center">
+          <div class="container text-center white-text smooth-scroll wow fadeInUp delay-1s">
+              <h1 style="font-size: 5.5rem;"><strong>Alexandre Mayer</strong></h1>
+              <br>
+              <h1>Developpeur web full-stack</h1>
+              <br>
+              <br>
+              <h2>Imaginer, Creer et Developper ensemble.</h2> 
+              <h2>Pour un site web qui vous ressemble et les rassemble.</h2>
+
+              <a href="#overall" class="btn btn-floating btn-large view-button wow fadeIn" data-wow-delay="0.4s"
+              data-offset="100" ><i class="fas fa-angle-down" aria-hidden="true"></i></a>
+          </div>
+
         </div>
     </div>
 
   </header>
 
   <!--Main Layout-->
-  <main class="text-center py-5">
+  <main class="text-center py-5" style="padding-bottom: 0em !important;">
+    <h1 class=""></h1>
+  
+    <!-- overall -->
+    <div class="central-div container my-5 p-5 lonely-mountain-dark-gradient z-depth-3 bg-white" style="border-radius: 4px;" id="overall">
 
-    <div class="container">
+
+      <!--Section: Content-->
+      <section class="white-text wow fadeInUp ">
+    
+        <!-- Section heading -->
+        <h2 class="text-center font-weight-bold mb-4 pb-2">Que pourrais-je vous apporter?</h2>
+        <!-- Section description -->
+        <p class="text-center lead grey-text mx-auto mb-5">
+          J'interviens dans chaque etape du processus de creation de votre projet, votre satisfaction est ma priorite.
+        </p>
+    
+        <!-- Grid row -->
         <div class="row">
-            <div class="col-md-12">
-
-                <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+    
+          <!-- Grid column -->
+          <div class="col-md-4">
+    
+            <!-- Grid row -->
+            <div class="row mb-3">
+    
+              <!-- Grid column -->
+              <div class="col-2">
+                <i class="fas fa-2x fa-flag-checkered deep-purple-text"></i>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-10">
+                <h5 class="font-weight-bold mb-3">International</h5>
+                <p class="grey-text">
+                  Votre site web accessible partout. Que vous souhaitiez vous faire connaitre ou vous developper a l'International,
+                  Je vous propose un service de traduction en anglais gratuitement.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
             </div>
-        </div>
-    </div>
+            <!-- Grid row -->
+    
+            <!-- Grid row -->
+            <div class="row mb-3">
+    
+              <!-- Grid column -->
+              <div class="col-2">
+                <i class="fas fa-2x fa-flask deep-purple-text"></i>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-10">
+                <h5 class="font-weight-bold mb-3">Experimental</h5>
+                <p class="grey-text">
+                  Vous avez une idee folle? ca tombe bien ! Imaginer et creer de nouvelles solutions, repousser les limites du possible et
+                   donner un sens a cela sont des sources inepuisable de motivation pour moi.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+            <!-- Grid row -->
+            <div class="row mb-md-0 mb-3">
+    
+              <!-- Grid column -->
+              <div class="col-2">
+                <i class="fas fa-2x fa-glass-martini deep-purple-text"></i>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-10">
+                <h5 class="font-weight-bold mb-3">Convivial</h5>
+                <p class="grey-text mb-md-0">Vous souhaitez que votre site soit a votre image ? Je mettrais tout en oeuvre pour en faire un site
+                   qui vous ressemble au mieux. <p>
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+          </div>
+          <!-- Grid column -->
+    
+          <!-- Grid column -->
+          <div class="col-md-4 text-center smooth-scroll">
+            <a href="#tools">
+              <img class="img-fluid" src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png"
+                alt="Sample image">
+            </a>
+          </div>
+          <!-- Grid column -->
+    
+          <!-- Grid column -->
+          <div class="col-md-4">
+    
+            <!-- Grid row -->
+            <div class="row mb-3">
 
+              <!-- Grid column -->
+              <div class="col-2">
+                <i class="fas fa-2x fa-magic deep-purple-text"></i>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-10">
+                <h5 class="font-weight-bold mb-3">Responsive</h5>
+                <p class="grey-text">
+                  Grace a mes outils de creation, votre site s'adaptera a n'importe quel appareil. PC, smartphone, tablette...
+                  Votre site sera magnifique sur n'importe quel ecran.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+            <!-- Grid row -->
+            <div class="row mb-3">
+    
+              <!-- Grid column -->
+              <div class="col-2">
+                <i class="fas fa-2x fa-bolt deep-purple-text"></i>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-10">
+                <h5 class="font-weight-bold mb-3">Maintenance permanente</h5>
+                <p class="grey-text">
+                  Si vous le souhaitez, je peux effectuer une maintenance quotidienne sur votre site. Mettre a jour le design,
+                  rajouter de nouveaux composants, de nouvelles fonctionnalites... Restez a la pointe de l'innovation web.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+            <!-- Grid row -->
+            <div class="row">
+    
+              <!-- Grid column -->
+              <div class="col-2">
+                <i class="far fa-2x fa-heart deep-purple-text"></i>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-10">
+                <h5 class="font-weight-bold mb-3">Fait avec amour</h5>
+                <p class="grey-text mb-0">
+                  L'importance est dans les details, c'est pourquoi j'apporterais le plus grand soin
+                   a chacune de vos idees, pour en faire un site unique.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+          </div>
+          <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+    
+      </section>
+      <!--Section: Content-->
+    
+    
+    </div>
+    <!-- /Overall -->
+
+    <!-- Tools -->
+    <div class="central-div jumbotron section-jumb pt-5 my-5 z-depth-2 bg-white" style="margin-bottom: 0rem !important;"  id="tools">
+      <section class="p-md-3 mx-md-5 wow fadeInUp">
+        <div class="row d-flex justify-content-between align-items-center">
+          <br>
+          <div class="col-md-6 mb-4">
+            <h2 class="font-weight-bold mb-3">Mes Outils</h2>
+            <p class="text-muted pt-3">
+              Les divers langages de programmation que maitrise un developpeur sont primordiaux pour la richesse de ses creations.
+              C'est pourquoi, pour creer votre site web, j'utilise une palette diverse d'outils performants me permettant de maitriser au mieux chaque etape du developpement.
+            </p>
+            <br><br><br><br>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
+            <i class="fa fa-layer-group indigo-text fa-10x"></i>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-bold mb-3">
+              <i class="fab fa-mdb indigo-text pr-2 "></i> MDBootstrap
+            </h4>
+            <p class="text-muted mb-lg-0">
+              Le meilleur et le plus utilise de tout les frameworks pour construire des sites web responsives.
+              Il me permet de construire la partie front-end du site.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-bold mb-3">
+              <i class="fab fa-js indigo-text pr-1 "></i> JavaScript
+            </h4>
+            <p class="text-muted mb-lg-0">
+              Langage de programmation de scripts indispensable pour creer du dynamisme dans une page web. 
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-bold mb-3">
+              <i class="flaticon-python indigo-text pr-2 "></i> Django
+            </h4>
+            <p class="text-muted mb-md-0">
+              Framework Python open source "pour les perfectionnistes avec des deadlines". 
+              Il constitue toute la partie backend de l'infrastructure du site.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-bold mb-3">
+              <i class="flaticon-mysql pr-2 "></i> MySQL
+            </h4>
+            <p class="text-muted mb-md-0">
+              Systeme de gestion  de base de donnees relationnelles.
+              Il est le meilleur compromis dans son domaine, c'est avec ce systeme que je vais creer votre base de donnees. 
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /Tools -->
+
+    <!-- Streak-->
+    <div class="streak streak-photo streak-md"
+        style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Work/12-col/img%20%2811%29.jpg');">
+      
+        <div class="mask flex-center rgba-indigo-strong">
+          <div class="white-text smooth-scroll mx-4">
+            <a class="btn btn-rounded purple-gradient" href="#your-needs">Continuer</a>
+          </div>
+        </div>
+
+      </div>
+    <!-- /Streak-->
+
+    <div class="lonely-mountain-gradient" style="padding-top: 5rem; padding-bottom: 5rem;">
+      <!-- YourNeeds Section -->
+      <div class="container my-5 central-div" id="your-needs">
+
+
+        <!--Section: Content-->
+        <section class="dark-grey-text section-jumb z-depth-1-half wow fadeInUp smooth-scroll">
+      
+          <!-- Section heading -->
+          <h3 class="text-center font-weight-bold mb-4 pb-2 fadeInUp">Que recherchez-vous ?</h3>
+          <hr class="w-header">
+          <!-- Section description -->
+          <p class="lead text-center w-responsive mx-auto text-muted mt-4 pt-2 mb-5 fadeInUp"></p>
+          
+          <!--First row-->
+          <div class="row">
+      
+            <!--First column-->
+            <div class="col-md-6 mb-4">
+      
+              <!-- Card -->
+              <a href="form_client.html" class="card hoverable ">
+                
+                <!-- Card content -->
+                <div class="card-body">
+      
+                  <div class="media wow fadeInUp delay-1s">
+                    <span class="card-img-100 d-inline-flex justify-content-center align-items-center rounded-circle grey lighten-3 mr-4">
+                      <i class="fab fa-react fa-2x text-info"></i>
+                    </span>
+                    <div class="media-body">
+                      <h5 class="dark-grey-text mb-3">Un site web ?</h5>
+                      <p class="font-weight-light text-muted mb-0">Que vous soyez un particulier ou que vous representiez un entreprise.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+      
+              </a>
+              <!-- Card -->
+      
+            </div>
+            <!--First column-->
+      
+            <!--Second column-->
+            <div class="col-md-6 mb-4">
+      
+              <!-- Card -->
+              <a href="form_hiring.html" class="card hoverable ">
+                
+                <!-- Card content -->
+                <div class="card-body">
+      
+                  <div class="media wow fadeInUp delay-1s">
+                    <span class="card-img-100 d-inline-flex justify-content-center align-items-center rounded-circle grey lighten-3 mr-4">
+                      <i class="far fa-user fa-2x purple-text"></i>
+                    </span>
+                    <div class="media-body">
+                      <h5 class="dark-grey-text mb-3">Un jeune talent a recruter ?</h5>
+                      <p class="font-weight-light text-muted mb-0">Vous representez une entreprise et cherchez un jeune developpeur web de talent.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+      
+              </a>
+              <!-- Card -->
+      
+            </div>
+            <!--Second column-->
+      
+          </div>
+          <!--First row-->
+      
+        </section>
+      </div>
+      <!-- /YourNeeds -->
+    </div>
   </main>
   <!--Main Layout-->
 
@@ -83,8 +413,18 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/modules/cards.min.js"></script>
+  <script type="text/javascript" src="js/modules/scrolling-navbar.min.js"></script>
+  <script type="text/javascript" src="js/modules/smooth-scroll.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      new WOW().init();
+    });
+  </script>
+
+
+  <script type="text/javascript" src="js/am_custom.js"></script>
 
 </body>
 </html>
