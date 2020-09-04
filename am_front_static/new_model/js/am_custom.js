@@ -76,3 +76,10 @@ function show_section(section) {
         console.log(error);
     }
 }
+
+
+function debug_form(form_id) {
+  var fname = document.getElementById("first_name").value;
+  
+  
+}

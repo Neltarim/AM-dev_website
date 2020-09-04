@@ -102,18 +102,19 @@
                         <!-- Form -->
                         <form class="text-center" id="client_form" style="color: #757575;" action="." method="POST">
                             {% csrf_token %}
+                            <br>
                             <div class="form-row">
                                 <div class="col">
                                     <!-- Last name -->
                                     <div class="md-form">
-                                        <input type="text" id="lastName" class="form-control" required>
+                                        <input type="text" id="last_name" class="form-control" required>
                                         <label>Nom</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <!-- First name -->
                                     <div class="md-form">
-                                        <input type="text" id="firstName" class="form-control" required>
+                                        <input type="text" id="first_name" class="form-control" required>
                                         <label>Prénom</label>
                                     </div>
                                 </div>
@@ -137,7 +138,7 @@
                 
                             <!-- Sign up button -->
                             <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-2"
-                                    type="submit">Envoyer</button>
+                                    onclick="form_submit('client_form','{{csrf_token}}')">Envoyer</button>
                 
                             
                 

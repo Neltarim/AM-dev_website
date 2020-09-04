@@ -76,3 +76,31 @@ function show_section(section) {
         console.log(error);
     }
 }
+function form_submit(form_id, csrf_token) {
+  var form = document.getElementById(form_id);
+  var fields = form.getElementsByClassName('form-control');
+
+  var data = new FormData();
+  data.append('csrfmiddlewaretoken', csrf_token)
+
+  for (i=0; i < fields.length; i++) {
+    data.append(fields[i].id, fields[i].value);
+  }
+
+  post_url = window.location.href
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', post_url, true );
+  xhr.onload = function () {
+    if (xhr.status === 201) {
+      window.location.pathname = '/thanks';
+    } else {
+      var node_err = document.createTextNode("Email already registered.");
+      p_err = document.createElement("p");
+      p_err.appendChild(node_err);
+      p_err.classList.add('p_err');
+
+      form.appendChild(p_err);
+    }
+  }
+  xhr.send(data);
+} 

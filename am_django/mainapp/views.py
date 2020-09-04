@@ -10,52 +10,60 @@ def index(request):
     HttpResponse.status_code = 200
     return HttpResponse(template.render(request=request))
 
+def thanks(request):
+    template = loader.get_template('mainapp/thanks.html')
+    HttpResponse.status_code = 201
+    return HttpResponse(template.render(request=request))
+
 
 def client_contact(request):
-    template = loader.get_template('mainapp/form_client.html')
+    template = None
     
     if request.method == 'POST':
 
-        new_client = Client()
-        
-        new_client.first_name = request.POST.get('firstName')
-        new_client.last_name = request.POST.get('lastName')
+        new_client = Company()
+
+        new_client.last_name = request.POST.get('last_name')
+        new_client.first_name = request.POST.get('first_name')
         new_client.email = request.POST.get('email')
         new_client.phone = request.POST.get('phone')
         new_client.message = request.POST.get('message')
 
-        print("new entry")
 
-        for key, value in request.POST.items():
-            print('key: %s' % (key))
-            print('value: %s' % (value))
         try :
+            print("trying to save new entry ...")
             new_client.save()
 
         except:
+
             HttpResponse.status_code = 401
-            template = loader.get_template('mainapp/index.html')
+            print("oops. New entry failed.")
+            template = loader.get_template('mainapp/form_client.html')
             return HttpResponse(template.render(request=request))
 
-        print("NEW ENTRY :")
+        print()
+        print("NEW CLIENT ENTRY :")
         print("Name :" + new_client.first_name)
         print("Type :" + new_client.last_name)
         print("Email :" + new_client.email)
         print("Message :" + new_client.message)
+        print()
 
-        template = loader.get_template('form/thanks.html')
+        thx = loader.get_template('mainapp/thanks.html')
         HttpResponse.status_code = 201
+        return HttpResponse(thx.render(request=request))
 
+    else:
+        template = loader.get_template('mainapp/form_client.html')
+    
     return HttpResponse(template.render(request=request))
 
 def hiring_contact(request):
-    template = loader.get_template('mainapp/form_hiring.html')
+    template = None
     
     if request.method == 'POST':
 
-        new_company = Client()
-
-        print(request.POST)
+        new_company = Company()
 
         new_company.last_name = request.POST.get('last_name')
         new_company.first_name = request.POST.get('first_name')
@@ -63,21 +71,31 @@ def hiring_contact(request):
         new_company.phone = request.POST.get('phone')
         new_company.message = request.POST.get('message')
 
+
         try :
+            print("trying to save new entry ...")
             new_company.save()
 
         except:
+
             HttpResponse.status_code = 401
+            print("oops. New entry failed.")
             template = loader.get_template('mainapp/form_hiring.html')
             return HttpResponse(template.render(request=request))
 
-        print("NEW ENTRY :")
+        print()
+        print("NEW COMPANY ENTRY :")
         print("Name :" + new_company.first_name)
         print("Type :" + new_company.last_name)
         print("Email :" + new_company.email)
         print("Message :" + new_company.message)
+        print()
 
-        template = loader.get_template('mainapp/thanks.html')
+        thx = loader.get_template('mainapp/thanks.html')
         HttpResponse.status_code = 201
+        return HttpResponse(thx.render(request=request))
 
+    else:
+        template = loader.get_template('mainapp/form_hiring.html')
+    
     return HttpResponse(template.render(request=request))

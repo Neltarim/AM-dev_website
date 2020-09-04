@@ -3,9 +3,9 @@
 
 <body>
   <header>
-
+    {% load static %}
     <div class="view jarallax" id="welcome" data-jarallax='{"speed": 0.2}'
-        style="background-image: url(img/highway-animated-wallpaper-4k-3840x2160.jpg);
+        style="background-image: url('{% static 'mainapp/img/highway-animated-wallpaper-4k-3840x2160.jpg' %}');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;">
@@ -18,7 +18,7 @@
             <h3 class="font-weight-bold">Merci !</h4>
             <h5 class="h5 font-weight-bold">Je reviens vers vous tres vite par mail, restez a l'affut.</h5>
 
-            <a class="btn btn-outline-info btn-md mt-3 waves-effect" href="#" role="button">Accueil</a>
+            <a class="btn btn-outline-info btn-md mt-3 waves-effect" onclick="location.href='/'" role="button">Accueil</a>
 
            </section>
          </div>

@@ -253,3 +253,9 @@ body {
     top: 1.25rem;
     }
 }
+
+.p_err {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: red;
+}
