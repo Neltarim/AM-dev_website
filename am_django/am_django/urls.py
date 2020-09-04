@@ -23,6 +23,9 @@ from mainapp import views
 
 urlpatterns = [
     url(r'^$', views.index),
+    url(r'^client_contact/', views.client_contact, name="client_contact"),
+    url(r'^hiring_contact/', views.hiring_contact, name="hiring_contact"),
+    url(r'^VBT1_admin_2528209i3/', admin.site.urls)
 ]
 
 if settings.DEBUG:

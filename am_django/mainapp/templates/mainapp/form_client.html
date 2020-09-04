@@ -1,0 +1,162 @@
+{% extends 'mainapp/basis.html' %}
+{% block content %}
+<body>
+
+<header>
+
+    <div class="intro-2" id="welcome">
+                
+        <div class="mask smooth-mask flex-center">
+
+
+
+            <div class="container z-depth-3 my-5 py-5 px-4 px-lg-0" style="background-color: white;">
+
+                <!-- Section -->
+                <section class="pr-timeline">
+                
+                <h3 class="font-weight-bold text-center dark-grey-text pb-2">Processus de création</h3>
+                <hr class="w-header my-4">
+                <p class="lead text-center text-muted pt-2 mb-5">Voici en détail toutes les étapes du processus de création de votre futur site.</p>
+                
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+            
+                    <ol class="timeline">
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Analyse de vos besoins</h5>
+                            <p class="text-muted">
+                                - Analyse de vos besoins en détail pour établir un cahier des charges solide.
+                                - Etablissement d'un premier devis avec l'estimation du coût total ainsi que le prix unitaire de chaque fonctionnalitées.
+                            </p>
+                        </li>
+            
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Dossier de spécifications fonctionnelles</h5>
+                            <p class="text-muted">
+                                J'établis un dossier qui permet de spécifier chaque fonctionnalitées du projet en toute claretée, pour qu'il n'y ait aucuns 
+                                malentendus sur l'une d'elles.
+                            </p>
+                        </li>
+            
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Creation du front-end</h5>
+                            <p class="text-muted">
+                                je m'atèle à la création de l'aspect "graphique" (interface utilisateur) du site, si une fois devant cette première version, quelque chose ne va pas,
+                                nous pourrons revoir le tout ensemble et effectuer les modifications nécessaires.
+                            </p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Création du back-end</h5>
+                            <p class="text-muted">
+                                Création de toute la partie backend (les rouages internes, caché aux yeux des utilisateurs) cette partie ne nécessite pas de
+                                validation de votre part car il s'agit du fonctionnement interne.
+                            </p>
+                        </li>
+            
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Déploiement</h5>
+                            <p class="text-muted">
+                                Ca y est votre site est près a être déployé aux yeux de tous !
+                            </p>
+                        </li>
+                    </ol>
+            
+                    </div>
+                </div>
+                
+                </section>
+                <!-- Section -->
+
+                <br>
+                <hr class="w-header my-4">
+                <div class="row flex-center">
+                    <h3>Convaincu ? Contactez moi !</h3>
+                </div>
+                <br>
+
+                <div class="row flex-center">
+                    <!-- Material form register -->
+                    <button id="modalactivate" type="button" class="btn purple-gradient" data-toggle="modal" data-target="#modaltest">
+                        Contact
+                    </button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+    <div class="modal fade" id="modaltest" tabindex="-1" role="dialog" aria-labelledby="exemplemodal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="card">
+                
+                    <!--Card content-->
+                    <div class="card-body px-lg-5 pt-0">
+                
+                        <!-- Form -->
+                        <form class="text-center" id="client_form" style="color: #757575;" action="." method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col">
+                                    <!-- Last name -->
+                                    <div class="md-form">
+                                        <input type="text" id="lastName" class="form-control" required>
+                                        <label>Nom</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <!-- First name -->
+                                    <div class="md-form">
+                                        <input type="text" id="firstName" class="form-control" required>
+                                        <label>Prénom</label>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- E-mail -->
+                            <div class="md-form mt-0">
+                                <input type="email" id="email" class="form-control" required>
+                                <label>E-mail</label>
+                            </div>
+                
+                            <!-- Phone number -->
+                            <div class="md-form">
+                                <input type="tel" id="phone" class="form-control" required>
+                                <label>Numéro Téléphone</label>
+                            </div>
+
+                            <div class="md-form">
+                                <textarea id="message" class="form-control mb-4" placeholder="  Courte description de votre projet.(Optionnel)"></textarea> 
+                            </div>
+                
+                            <!-- Sign up button -->
+                            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-2"
+                                    type="submit">Envoyer</button>
+                
+                            
+                
+                            <!-- Terms of service -->
+                            <p>En cliquant sur 
+                                <em> Envoyer </em> Vous acceptez les
+                                <a href="" target="_blank">CGU</a>.
+                
+                        </form>
+                        <!-- Form -->
+                
+                    </div>
+                
+                </div>
+                <!-- Material form register -->
+            </div>
+        </div>
+    </div>
+    <main></main>
+
+    {% endblock %}
+

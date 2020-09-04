@@ -1,0 +1,255 @@
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+/* 
+    Navbar
+*/
+
+.navbar {
+    background-color: transparent;
+
+}
+
+.top-nav-collapse {
+    background: -moz-linear-gradient(45deg, #28a1a588, #540f5ec2 100%);
+    background: -webkit-linear-gradient(45deg, #28a1a588, #540f5ec2 100%);
+    background: linear-gradient(45deg, #28a1a588, #540f5ec2 100%);
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background: -moz-linear-gradient(45deg, #28a1a588, #540f5ec2 100%);
+        background: -webkit-linear-gradient(45deg, #28a1a588, #540f5ec2 100%);
+        background: linear-gradient(45deg, #28a1a588, #540f5ec2 100%);
+    }
+}
+
+/**/
+
+.space {
+    margin: 10rem;
+}
+
+/*
+    Welcome
+*/
+.intro-2 {
+    background: url("../img/highway-animated-wallpaper-4k-3840x2160.jpg")no-repeat center center;
+    background-size: cover;
+}
+
+.smooth-mask {
+        background: linear-gradient(45deg, #105d7c75, #8107bc75);
+        background-size: 600% 600%;
+
+        -webkit-animation: smooth-mask 6s ease infinite;
+        -moz-animation: smooth-mask 6s ease infinite;
+        -o-animation: smooth-mask 6s ease infinite;
+        animation: smooth-mask 6s ease infinite;
+}
+
+@-webkit-keyframes smooth-mask {
+    0%{background-position: 70% 50%}
+    50%{background-position: 20% 50%}
+    100%{background-position: 70% 50%}
+}
+
+@-moz-keyframes smooth-mask {
+    0%{background-position: 70% 50%}
+    50%{background-position: 20% 50%}
+    100%{background-position: 70% 50%}
+}
+
+@-o-keyframes smooth-mask {
+    0%{background-position: 70% 50%}
+    50%{background-position: 20% 50%}
+    100%{background-position: 70% 50%}
+}
+
+@keyframes smooth-mask {
+    0%{background-position: 70% 50%}
+    50%{background-position: 20% 50%}
+    100%{background-position: 70% 50%}
+}
+
+.speed-mask {
+    background: linear-gradient(45deg, #105d7c9c, #8007bc8e);
+    background-size: 600% 600%;
+
+    -webkit-animation: speed-mask 3s ease infinite;
+    -moz-animation: speed-mask 3s ease infinite;
+    -o-animation: speed-mask 3s ease infinite;
+    animation: speed-mask 3s ease infinite;
+}
+
+@-webkit-keyframes speed-mask {
+0%{background-position: 70% 50%}
+50%{background-position: 20% 50%}
+100%{background-position: 70% 50%}
+}
+
+@-moz-keyframes speed-mask {
+0%{background-position: 70% 50%}
+50%{background-position: 20% 50%}
+100%{background-position: 70% 50%}
+}
+
+@-o-keyframes speed-mask {
+0%{background-position: 70% 50%}
+50%{background-position: 20% 50%}
+100%{background-position: 70% 50%}
+}
+
+@keyframes speed-mask {
+0%{background-position: 70% 50%}
+50%{background-position: 20% 50%}
+100%{background-position: 70% 50%}
+}
+
+/*
+    your needs
+*/
+
+.section-jumb {
+    background: #ffffff;
+    padding: 4rem;
+}
+
+.lonely-mountain-gradient {
+    background: -moz-linear-gradient(180deg, #5c2d91c9, #2137b3c9 100%);
+    background: -webkit-linear-gradient(180deg, #5c2d91c9, #2137b3c9 100%);
+    background: linear-gradient(180deg, #5c2d91c9, #2137b3c9 100%);
+}
+
+.lonely-mountain-gradient-low {
+    background: -moz-linear-gradient(180deg, #5c2d91a1, #2137b38f 100%);
+    background: -webkit-linear-gradient(180deg, #5c2d91a1, #2137b38f 100%);
+    background: linear-gradient(180deg, #5c2d91a1, #2137b38f 100%);
+}
+
+.lonely-mountain-dark-gradient {
+    background: -moz-linear-gradient(180deg, #2d134bea, #0f1b5eea 100%);
+    background: -webkit-linear-gradient(180deg, #2d134bea, #0f1b5eea 100%);
+    background: linear-gradient(180deg, #2d134bea, #0f1b5eea 100%);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.view-button {
+    background-color: #0000007e;
+    margin-top: 9rem;
+}
+
+.ico-md {
+    font-size: 64px !important;
+}
+
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    margin-left: -1px;
+    background-color: #50a1ff;
+}
+
+.timeline-element {
+    position: relative;
+    width: 50%;
+    padding: 1rem 0;
+    padding-right: 2.5rem;
+    text-align: right;
+}
+
+.timeline-element::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 1.35rem;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #50a1ff;
+    background-color: #fff;
+}
+
+.timeline-element:nth-child(even)::before {
+    right: auto;
+    left: -8px;
+}
+
+.timeline-element:nth-child(even) {
+    margin-left: 50%;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    text-align: left;
+}
+
+@media (max-width: 767.98px) {
+    .timeline::before {
+    left: 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element {
+    width: 100%;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element::before {
+    top: 1.25rem;
+    left: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element:nth-child(even) {
+    margin-left: 0rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element {
+    width: 100%;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element:nth-child(even)::before {
+    left: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element::before {
+    top: 1.25rem;
+    }
+}
