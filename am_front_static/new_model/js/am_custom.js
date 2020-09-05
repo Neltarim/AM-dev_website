@@ -1,4 +1,4 @@
-function fadeIn( elem, ms )
+function fadeIn( elem, ms ) //Display a html item with a fade
 {
 
     if( ! elem )
@@ -30,7 +30,7 @@ function fadeIn( elem, ms )
     }
 }
  
-function fadeOut( elem, ms )
+function fadeOut( elem, ms ) //Hide a html item with a fade
 {
   if( ! elem )
     return;
@@ -60,7 +60,7 @@ function fadeOut( elem, ms )
   }
 }
 
-function show_section(section) {
+function show_section(section) { //Show one section and hide others.
     var section_to_show = document.getElementById(section);
 
     var sections = document.getElementsByClassName('central-div');
@@ -78,8 +78,31 @@ function show_section(section) {
 }
 
 
-function debug_form(form_id) {
-  var fname = document.getElementById("first_name").value;
-  
-  
-}
+function form_submit(form_id, csrf_token) { //Manual submitting form (MDB is ruining django)
+  var form = document.getElementById(form_id);
+  var fields = form.getElementsByClassName('form-control');
+
+  var data = new FormData();
+  data.append('csrfmiddlewaretoken', csrf_token)
+
+  for (i=0; i < fields.length; i++) {
+    data.append(fields[i].id, fields[i].value);
+  }
+
+  post_url = window.location.href
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', post_url, true );
+  xhr.onload = function () {
+    if (xhr.status === 201) {
+      window.location.pathname = '/thanks';
+    } else {
+      var node_err = document.createTextNode("Email already registered.");
+      p_err = document.createElement("p");
+      p_err.appendChild(node_err);
+      p_err.classList.add('p_err');
+
+      form.appendChild(p_err);
+    }
+  }
+  xhr.send(data);
+} 
