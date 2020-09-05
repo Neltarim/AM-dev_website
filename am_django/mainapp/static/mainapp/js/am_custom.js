@@ -1,4 +1,4 @@
-function fadeIn( elem, ms )
+function fadeIn( elem, ms ) //Display a html item with a fade
 {
 
     if( ! elem )
@@ -30,7 +30,7 @@ function fadeIn( elem, ms )
     }
 }
  
-function fadeOut( elem, ms )
+function fadeOut( elem, ms ) //Hide a html item with a fade
 {
   if( ! elem )
     return;
@@ -60,7 +60,7 @@ function fadeOut( elem, ms )
   }
 }
 
-function show_section(section) {
+function show_section(section) { //Show one section and hide others.
     var section_to_show = document.getElementById(section);
 
     var sections = document.getElementsByClassName('central-div');
@@ -76,7 +76,9 @@ function show_section(section) {
         console.log(error);
     }
 }
-function form_submit(form_id, csrf_token) {
+
+
+function form_submit(form_id, csrf_token) { //Manual submitting form (MDB is ruining django)
   var form = document.getElementById(form_id);
   var fields = form.getElementsByClassName('form-control');
 
